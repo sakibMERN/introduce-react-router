@@ -7,6 +7,7 @@ export default function Header() {
         <h2>This is my website</h2>
         <nav>
             <Link to={'/'}>Home</Link>
+            <Link to={'/posts'}>Posts</Link>
             <Link to={'/about'}>About</Link>
             <Link to={'/contact'}>Contact</Link>
             <Link to={'/users'}>Users</Link>

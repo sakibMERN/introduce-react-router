@@ -1,5 +1,7 @@
-
+import { AwesomeButton } from 'react-awesome-button';
+import 'react-awesome-button/dist/styles.css';
 import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom';
 
 const User = ({user}) => {
     const {name, id, email, phone} = user;
@@ -15,6 +17,9 @@ const User = ({user}) => {
         <h2>{name}</h2>
         <p>Email: {email}</p>
         <p>Phone: {phone}</p>
+        <Link to={`/user/${id}`}>Show Details</Link>
+        <br />
+        <Link to={`/user/${id}`}><AwesomeButton type="primary">See Details</AwesomeButton></Link>
     </div>
   )
 }
