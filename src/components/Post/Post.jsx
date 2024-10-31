@@ -18,6 +18,9 @@ const Post = ({post}) => {
     const handleShowDetails = () => {
         navigate(`/post/${id}`);
     }
+    const handleDetails = () => {
+        navigate(`/post/${id}`)
+    }
   return (
     <div style={post_container}  className='flex flex-col'>
         <div className='flex-grow'>
@@ -26,6 +29,7 @@ const Post = ({post}) => {
         </div>
         {/* <Link to={`/post/${id}`} className='mb-4'><button className='btn btn-primary bg-green-400 text-white'>Post Details</button></Link> */}
         <button onClick={handleShowDetails} className='text-black'>Click to see details</button>
+        <button onClick={handleDetails} className='text-black'>Click to see details</button>
     </div>
   )
 }

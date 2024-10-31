@@ -1,15 +1,22 @@
 
 import PropTypes from 'prop-types'
-import { Link, useLoaderData, useNavigate } from 'react-router-dom'
+import { Link, useLoaderData, useNavigate, useParams } from 'react-router-dom'
 
 const PostDetails = () => {
     const postDetails = useLoaderData();
-    const navigate = useNavigate()
+    const navigate = useNavigate();
+    const {postId} = useParams();
+    console.log(postId);
+
     const {id, title, body} = postDetails;
     console.log(postDetails);
 
     const handleGoBack = () => {
         navigate(-1);
+    }
+
+    const handleBackTOMenu = () => {
+      navigate(-1);
     }
 
   return (
@@ -19,6 +26,7 @@ const PostDetails = () => {
         <p><small>{body}</small></p>
         {/* <Link to={'/posts'}><button>Go back post</button></Link> */}
         <button onClick={handleGoBack}>Go back</button>
+        <button onClick={handleBackTOMenu}>Go back menu</button>
     </div>
   )
 }
